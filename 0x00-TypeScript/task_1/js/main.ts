@@ -23,3 +23,36 @@ const printTeacher: printTeacherFunction = function (firstName: string, lastName
 };
 
 printTeacher('john', 'Doe');
+
+interface StudentClassInterface {
+  firstName: string;
+  lastName: string;
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+interface classConstructor {
+    new(firstName: string, lastName: string): StudentClassInterface;
+}
+
+class StudentClass implements StudentClassInterface {
+  firstName: string;
+  lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return 'Currently working';
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
+const student: StudentClass = new StudentClass('Elon', 'Musk')
+console.log(student.workOnHomework());
+console.log(student.displayName());
