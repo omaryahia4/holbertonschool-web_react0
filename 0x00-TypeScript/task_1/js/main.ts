@@ -1,5 +1,3 @@
-import { FlowNode } from "typescript";
-
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
