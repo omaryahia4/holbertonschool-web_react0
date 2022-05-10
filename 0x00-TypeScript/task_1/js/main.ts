@@ -1,5 +1,3 @@
-import { FlowNode } from "typescript";
-
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -29,10 +27,6 @@ interface StudentClassInterface {
   lastName: string;
   workOnHomework(): string;
   displayName(): string;
-}
-
-interface classConstructor {
-    new(firstName: string, lastName: string): StudentClassInterface;
 }
 
 class StudentClass implements StudentClassInterface {
