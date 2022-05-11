@@ -29,6 +29,10 @@ interface StudentClassInterface {
   displayName(): string;
 }
 
+interface classConstructor {
+  new (firstName: string, lastName: string): StudentClassInterface;
+}
+
 class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
