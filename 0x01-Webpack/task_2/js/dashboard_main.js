@@ -1,5 +1,6 @@
 import $ from 'jquery';
 const _ = require('lodash');
+import '../css/main.css';
 
 $('body').append('<p>Holberton Dashboard</p>');
 $('body').append('<p>Dashboard data for the students</p>');
