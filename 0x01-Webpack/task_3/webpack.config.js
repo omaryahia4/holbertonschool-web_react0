@@ -25,9 +25,8 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
+    static: path.join(__dirname, 'public'),
+    open: true,
     compress: true,
     port: 8564,
   },
@@ -42,5 +41,10 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
   },
 };
