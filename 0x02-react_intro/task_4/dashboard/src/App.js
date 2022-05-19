@@ -7,11 +7,11 @@ function App() {
   return (
     <div className='App'>
       <div className='root-notifications'>{Notifications()}</div>
-      <header className='App-header'>
+      <div className='App-header'>
         <img className='App-logo' src={HolbertonLogo} alt='logo'></img>
         <h1>School dashboard</h1>
-      </header>
-      <body className='App-body'>
+      </div>
+      <div className='App-body'>
         <p>Login to access the full dashboard</p>
         <label className='email'>
           Email:
@@ -22,12 +22,12 @@ function App() {
         </label>
         <input type='password'/>
         <button className='label-button'>OK</button>
-      </body>
-      <footer className='App-footer'>
+      </div>
+      <div className='App-footer'>
         <p>
           {getFullYear()} {getFooterCopy()}
         </p>
-      </footer>
+      </div>
     </div>
   );
 }
