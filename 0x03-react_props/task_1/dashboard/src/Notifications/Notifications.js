@@ -1,23 +1,19 @@
-import React from 'react'
-import './Notifications.css'
+import React from 'react';
+import './Notifications.css';
 import Closeicon from '../assets/close-icon.png';
 import { getLatestNotification } from '../utils/utils.js';
-import NotificationItem from './NotificationItem';
 
 export default function Notifications() {
   return (
     <div className='Notifications'>
       <p>Here is the list of notifications</p>
       <ul>
-        <NotificationItem
-          type='default'
-          value='New course available'
-        />
-        <NotificationItem type='urgent' value='New resume available' />
-        <NotificationItem
-          type='urgent'
-          html={{ __html: getLatestNotification() }}
-        />
+        <li data='default'>New course available</li>
+        <li data='urgent'>New resume available</li>
+        <li
+          data='urgent'
+          dangerouslySetInnerHTML={{ __html: getLatestNotification() }}
+        ></li>
       </ul>
       <button
         aria-label='Close'
