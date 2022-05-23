@@ -1,5 +1,6 @@
+import React from 'react';
 import HolbertonLogo from '../assets/HolbertonLogo.jpg';
-import './App.css'
+import './App.css';
 import { getFullYear, getFooterCopy } from '../utils/utils.js';
 import Notifications from '../Notifications/Notifications.js';
 
@@ -13,14 +14,10 @@ function App() {
       </div>
       <div className='App-body'>
         <p>Login to access the full dashboard</p>
-        <label className='email'>
-          Email:
-        </label>
-        <input type='email'/>
-        <label className='password'>
-          Password: 
-        </label>
-        <input type='password'/>
+        <label className='email'>Email:</label>
+        <input type='email' />
+        <label className='password'>Password:</label>
+        <input type='password' />
         <button className='label-button'>OK</button>
       </div>
       <div className='App-footer'>
