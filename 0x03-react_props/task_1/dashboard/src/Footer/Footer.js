@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className='App-footer'>
       <p>
-        {getFullYear()} {getFooterCopy()}
+        Copyright {getFullYear()} - {getFooterCopy(true)}
       </p>
     </div>
   );
