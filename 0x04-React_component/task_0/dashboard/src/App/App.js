@@ -22,6 +22,7 @@ class App extends React.Component {
       { id: 3, type: 'urgent', html: { __html: getLatestNotification() } },
     ];
   }
+  
   render() {
     if (!this.props.isLoggedIn) {
       return (

@@ -69,7 +69,7 @@ export default function Notifications(props) {
 }
 Notifications.propTypes = {
   displayDrawer: PropTypes.bool,
-  listNotifications: PropTypes.arrayOf(PropTypes.NotificationItemShape),
+  listNotifications: PropTypes.arrayOf(NotificationItemShape),
 };
 Notifications.defaultProps = {
   displayDrawer: false,
