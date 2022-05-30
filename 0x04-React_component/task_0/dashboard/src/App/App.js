@@ -11,6 +11,7 @@ import { getLatestNotification } from '../utils/utils';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.isLoggedIn = props.isLoggedIn;
     this.listCourses = [
       { id: 1, name: 'ES6', credit: 60 },
       { id: 2, name: 'Webpack', credit: 20 },
