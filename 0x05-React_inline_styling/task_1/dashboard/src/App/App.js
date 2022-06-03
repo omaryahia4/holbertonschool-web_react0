@@ -91,20 +91,27 @@ class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  headerStyle: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    fontSize: '20px',
+    fontFamily: 'sans-serif',
+    color: '#e0454b',
+  },
   bodyStyle: {
     borderTop: 'solid',
     borderBottom: 'solid',
     borderColor: '#e0454b',
     minHeight: '50vmax',
-    padding: '30px'
+    padding: '30px',
   },
 
   footerStyle: {
     display: 'flex',
     justifyContent: 'center',
     fontStyle: 'italic',
-    fontFamily: 'sans-serif'
-  }
+    fontFamily: 'sans-serif',
+  },
 });
 
 App.defaultProps = {
