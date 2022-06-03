@@ -52,7 +52,7 @@ class App extends React.Component {
       return (
         <React.Fragment>
           <Notifications listNotifications={listNotifications} />
-          <div className='App'>
+          <div className={css(styles.headerStyle)}>
             <Header />
           </div>
           <div className={css(styles.bodyStyle)}>
@@ -73,7 +73,7 @@ class App extends React.Component {
       return (
         <React.Fragment>
           <Notifications />
-          <div className='App'>
+          <div className={css(styles.headerStyle)}>
             <Header />
           </div>
           <div className={css(styles.bodyStyle)}>
