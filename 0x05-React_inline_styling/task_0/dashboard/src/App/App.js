@@ -5,7 +5,7 @@ import Header from '../Header/Header.js';
 import Login from '../Login/Login';
 import Footer from '../Footer/Footer';
 import PropTypes from 'prop-types';
-import CourseList from '../../CourseList/CourseList';
+import CourseList from '../CourseList/CourseList';
 import { getLatestNotification } from '../utils/utils';
 import BodySection from '../BodySection/BodySection';
 import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
