@@ -105,8 +105,9 @@ const styles = StyleSheet.create({
     borderColor: 'crimson',
     marginBottom: '1rem',
     width: '40%',
-    left: '73%',
+    left: '25%',
     fontFamily: 'sans-serif',
+    padding: '1%'
   },
 
   passwordStyle: {
@@ -117,7 +118,7 @@ const styles = StyleSheet.create({
   buttonStyle: {
     position: 'absolute',
     maxHeight: '12px',
-    left: '24rem',
+    right: '4%',
     top: '1rem',
     background: 'transparent',
     border: 'none',
