@@ -12,11 +12,6 @@ class Notifications extends React.Component {
       listNotifications: this.props.listNotifications,
     };
     this.markAsRead = this.markAsRead.bind(this);
-    this.displayDrawer = this.props.displayDrawer;
-    this.handleDisplayDrawer = this.props.handleDisplayDrawer;
-    this.handleHideDrawer = this.props.handleHideDrawer;
-
-
   }
 
   markAsRead(id) {
@@ -32,54 +27,71 @@ class Notifications extends React.Component {
   }
 
   render() {
-    if (this.state.listNotifications.length === 0) {
-      return (
-        <React.Fragment>
-          <div className={css(styles.menuItem)}>
-            <p onClick={() => this.handleDisplayDrawer()}>Your notifications</p>
-          </div>
-          <div className={css(styles.notificationsStyle)}>
-            <p>No new notifications for now</p>{' '}
-          </div>
-        </React.Fragment>
-      );
-    }
-
-    else {
-      return (
-        <React.Fragment>
-          <div className={css(styles.notificationsStyle)}>
+     const { displayDrawer, handleDisplayDrawer, handleHideDrawer } =
+       this.props;
+       if (this.state.listNotifications.length === 0) {
+        if (!displayDrawer) {
+          return (
+            <div className={css(styles.notificationsMenu)}>
+              <div className={css(styles.menuItem)}>
+                <p onClick={() => handleDisplayDrawer()}>Your notifications</p>
+              </div>
+              <div className={css(styles.notificationsStyle)}>
+                <p>No new notifications for now</p>
+              </div>
+            </div>
+          );
+        }
+        else {
+          return (
+            <div className={css(styles.notificationsMenu)}>
+              <div className={css(styles.menuItem)}>
+                <p onClick={() => handleDisplayDrawer()}>Your notifications</p>
+              </div>
+            </div>
+          );
+        }
+      } else {
+         if (displayDrawer) {
+          return (
+            <div className={css(styles.notificationsStyle)}>
               <p>Here is the list of notifications</p>
               <ul>
-                {this.state.listNotifications.map(
-                  ({ id, type, value, html }) => (
-                    <NotificationItem
-                      key={id}
-                      type={type}
-                      value={value}
-                      html={html}
-                      markAsRead={this.markAsRead}
-                    />
-                  )
-                )}
+                {this.state.listNotifications.map(({ id, type, value, html }) => (
+                  <NotificationItem
+                    key={id}
+                    type={type}
+                    value={value}
+                    html={html}
+                  />
+                ))}
               </ul>
-          
-            <button
-              aria-label='Close'
-              type='button'
-              onClick={() => this.handleHideDrawer()}
-              className={css(styles.buttonStyle)}
-            >
-              <img
-                src={Closeicon}
-                alt='close-icon'
-                className={css(styles.imageStyle)}
-              />
-            </button>
+
+              <button
+                aria-label='Close'
+                type='button'
+                onClick={() => handleHideDrawer()}
+                className={css(styles.buttonStyle)}
+              >
+                <img
+                  src={Closeicon}
+                  alt='close-icon'
+                  className={css(styles.imageStyle)}
+                />
+              </button>
             </div>
-        </React.Fragment>
-      )
-    }
+          );
+         }
+         else {
+          return (
+            <div className={css(styles.notificationsMenu)}>
+              <div className={css(styles.menuItem)}>
+                <p onClick={() => handleDisplayDrawer()}>Your notifications</p>
+              </div>
+            </div>
+          );
+         }
+      }
 }
 }
 
@@ -99,18 +111,21 @@ Notifications.defaultProps = {
 
 const styles = StyleSheet.create({
   menuItem: {
-    textAlign: 'right',
+    textAlign: 'left',
   },
+  notificationsMenu: {
+    display: 'flex',
+    flexDirection: 'column'
 
+  },
   notificationsStyle: {
     position: 'relative',
     border: 'dotted',
     borderColor: 'crimson',
     marginBottom: '1rem',
-    width: '40%',
-    left: '25%',
+    width: '70%',
     fontFamily: 'sans-serif',
-    padding: '3px'
+    padding: '3px',
   },
 
   passwordStyle: {
