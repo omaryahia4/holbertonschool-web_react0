@@ -24,10 +24,10 @@ const listNotifications = [
 
 class App extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
-      isLoggedIn: props.isLoggedIn || false,
-      displayDrawer: false,
+      isLoggedIn: false,
+      displayDrawer: false
     };
     this.logOut = props.logOut;
     this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
@@ -120,12 +120,14 @@ class App extends React.Component {
 
 const styles = StyleSheet.create({
   headerStyle: {
-    display: 'inline-flex',
+    display: 'flex',
+    justifyContent: 'space-between',
     flexDirection: 'row-reverse',
     alignItems: 'center',
     fontSize: '20px',
     fontFamily: 'sans-serif',
     color: '#e0454b',
+    padding: '10px'
   },
 
   bodyStyle: {
@@ -148,6 +150,7 @@ const styles = StyleSheet.create({
 });
 
 App.defaultProps = {
+  displayDrawer: false,
   isLoggedIn: false,
   logOut: () => {
     return;
@@ -157,6 +160,7 @@ App.defaultProps = {
 App.propTypes = {
   isLoggedIn: PropTypes.bool,
   logOut: PropTypes.func,
+  displayDrawer: PropTypes.bool,
 };
 
 export default App;
