@@ -27,7 +27,7 @@ class App extends React.Component {
     super();
     this.state = {
       isLoggedIn: props.isLoggedIn || false,
-      displayDrawer: true,
+      displayDrawer: false,
     };
     this.logOut = props.logOut;
     this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
