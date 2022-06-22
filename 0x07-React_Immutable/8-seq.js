@@ -7,7 +7,7 @@ const printBestStudents = (grades) =>
       return {
         ...x,
         firstName: x.firstName.charAt(0).toUpperCase() + x.firstName.substring(1),
-        lastName: x.lastName.charAt(0).toUpperCase() + x.lastName.substring(1)
+        lastName: x.lastName.charAt(0).toUpperCase() + x.lastName.substring(1),
       };
     }).toObject());
 
