@@ -11,5 +11,3 @@ export default function getAllNotificationsByUser(userId) {
     return arr
   }
 }
-const userId = "5debd764a7c57c7839d722e9"
-console.log(getAllNotificationsByUser(userId))
