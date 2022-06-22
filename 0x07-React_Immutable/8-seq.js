@@ -1,7 +1,7 @@
 import { Seq } from 'immutable';
 
 const printBestStudents = (grades) => {
-  return Seq(grades)
+  console.log(Seq(grades)
     .filter(x => x.score > 70)
     .map(x => {
       return {
@@ -9,7 +9,7 @@ const printBestStudents = (grades) => {
         firstName: x.firstName.charAt(0).toUpperCase() + x.firstName.substring(1),
         lastName: x.lastName.charAt(0).toUpperCase() + x.lastName.substring(1)
       };
-    });
+    }).toObject());
 };
 
 export default printBestStudents;
