@@ -6,7 +6,7 @@ export const map = Map({
   3: 'Elijah',
   4: 'Oliver',
   5: 'Jacob',
-  6: 'Lucas'
+  6: 'Lucas',
 });
 
 export const map2 = map.withMutations(mapp => {
