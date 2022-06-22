@@ -1,7 +1,7 @@
 import { Seq } from 'immutable';
 
-const printBestStudents = (obj) => {
-  return Seq(obj)
+const printBestStudents = (grades) => {
+  return Seq(grades)
     .filter(x => x.score > 70)
     .map(x => {
       return {
