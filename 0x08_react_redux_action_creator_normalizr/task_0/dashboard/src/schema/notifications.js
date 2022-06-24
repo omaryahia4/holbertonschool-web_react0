@@ -1,4 +1,4 @@
-import * as notificationsList from '../../../notifications.json' assert {type: 'json'};
+import * as notificationsList from '../../../../notifications.json' assert {type: 'json'};
 export default function getAllNotificationsByUser(userId) {  
   for (const notif in notificationsList) {
     const arr = []

@@ -1,4 +1,4 @@
-import * as notificationsList from '../../../notifications.json' assert {type: 'json'};
+import * as notificationsList from '../../../../notifications.json' assert {type: 'json'};
 import { normalize, schema } from 'normalizr';
 
 export function getAllNotificationsByUser(userId) {
