@@ -1,4 +1,4 @@
-import * as notificationsList from '../../../../notifications.json' assert {type: 'json'};
+import * as notificationsData from "../../notifications.json";
 import { normalize, schema } from "normalizr";
 
 const user = new schema.Entity("users");
@@ -16,7 +16,7 @@ const notification = new schema.Entity("notifications", {
   context: message,
 });
 
-const normalizedData = normalize(notificationsList.default, [notification]);
+const normalizedData = normalize(notificationsData.default, [notification]);
 
 export { normalizedData };
 
