@@ -1,4 +1,5 @@
 <img src ='./redux-logo-landscape.png'>
+
 # React Redux action creator+normalizr
 ## Learning Objectives
 -   Normalizr’s purpose and how to use it
