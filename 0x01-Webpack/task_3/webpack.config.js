@@ -25,7 +25,10 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   devServer: {
-    static: path.join(__dirname, './public'),
+    static: {
+      directory: path.join(__dirname, "./public"),
+      serveIndex: true,
+    },
     open: true,
     compress: true,
     port: 8564,
