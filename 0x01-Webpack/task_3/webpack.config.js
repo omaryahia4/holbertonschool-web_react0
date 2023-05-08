@@ -10,8 +10,9 @@ module.exports = {
     footer: './modules/footer/footer.js',
   },
   output: {
-    filename: '[name].bundle.js',
     path: path.resolve(__dirname, './public'),
+    filename: '[name].bundle.js'
+    
   },
   optimization: {
     splitChunks: {
@@ -46,6 +47,12 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Holberton Dashboard',
+  }),
+    new CleanWebpackPlugin()
+  ],
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
