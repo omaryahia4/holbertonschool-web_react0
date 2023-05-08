@@ -9,7 +9,7 @@ $('body').append('<p>Copyright - Holberton School</p>');
 
 $('button').on(
   'click',
-  _.debounce(updateCounter, 300, {
+  _.debounce(updateCounter, 500, {
     leading: true,
     trailing: false,
   })
@@ -20,5 +20,3 @@ function updateCounter() {
   count++;
   $('#count').text(`${count} clicks on the button`);
 }
-
-$('body').prepend('<p id="logo"></p>');
