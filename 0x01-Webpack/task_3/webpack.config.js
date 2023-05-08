@@ -30,6 +30,7 @@ module.exports = {
     compress: true,
     port: 8564,
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
