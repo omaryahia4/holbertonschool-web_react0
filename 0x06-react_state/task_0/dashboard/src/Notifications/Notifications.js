@@ -29,7 +29,7 @@ class Notifications extends React.Component {
     } = this.props;
 
     return (
-      <React.Fragment>
+      <>
         <div className={css(styles.menuItem)} onClick={handleDisplayDrawer}>
           <p className={css(styles.animationOpacity, styles.animationBounce)}>Your notifications</p>
         </div>
@@ -64,7 +64,7 @@ class Notifications extends React.Component {
             </ul>
           </div>
         )}
-      </React.Fragment>
+      </>
     );
   };
 }
