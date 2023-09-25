@@ -30,31 +30,44 @@ class Notifications extends React.Component {
 
     return (
       <>
-        <div className={css(styles.menuItem)} onClick={handleDisplayDrawer}>
-          <p className={css(styles.animationOpacity, styles.animationBounce)}>Your notifications</p>
+        <div
+          className={css(styles.menuItem)}
+          id="menuItem"
+          onClick={handleDisplayDrawer}
+        >
+          <p className={menuPStyle}>Your notifications</p>
         </div>
         {displayDrawer && (
-          <div className={css(styles.notifications, styles.notificationsMobile)}>
+          <div className={css(styles.notifications)} id="Notifications">
             <button
-              className={css(styles.buttonMobile)}
               style={{
-                position: "absolute",
-                right: "1rem",
-                top: "1rem",
-                fontSize: "1rem",
+                background: "transparent",
                 border: "none",
-                background: "none",
-                cursor: "pointer"
+                position: "absolute",
+                right: 20,
               }}
-              aria-label={"Close"}
+              aria-label="close"
               onClick={handleHideDrawer}
-            >x</button>
-            {listNotifications.length === 0 ? <p>No new notification for now</p> : <p>Here is the list of notifications</p>}
-            <ul className={css(styles.ulMobile)}>
+              id="closeNotifications"
+            >
+              <img
+                src={closeIcon}
+                alt="close-icon"
+                className={css(styles.notificationsButtonImage)}
+              />
+            </button>
+            <p className={css(styles.notificationsP)}>
+              Here is the list of notifications
+            </p>
+            <ul className={css(styles.notificationsUL)}>
+              {listNotifications.length === 0 && (
+                <NotificationItem value="No new notification for now" />
+              )}
+
               {listNotifications.map((notification) => (
                 <NotificationItem
-                  id={notification.id}
                   key={notification.id}
+                  id={notification.id}
                   type={notification.type}
                   value={notification.value}
                   html={notification.html}
