@@ -27,6 +27,7 @@ class Notifications extends React.Component {
       handleDisplayDrawer,
       handleHideDrawer,
     } = this.props;
+
     return (
       <React.Fragment>
         <div className={css(styles.menuItem)} onClick={handleDisplayDrawer}>
