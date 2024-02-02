@@ -69,6 +69,7 @@ class App extends React.Component {
   }
 
   render() {
+    const { displayDrawer } = this.state;
     const listNotifications = [
       { id: 1, type: 'default', value: 'New course available' },
       { id: 2, type: 'urgent', value: 'New resume available' },
@@ -83,7 +84,7 @@ class App extends React.Component {
 
     return (
       <>
-        <Notifications listNotifications={listNotifications} displayDrawer={this.state.displayDrawer} handleDisplayDrawer={this.handleDisplayDrawer} handleHideDrawer={this.handleHideDrawer} />
+        <Notifications listNotifications={listNotifications} displayDrawer={displayDrawer} handleDisplayDrawer={this.handleDisplayDrawer} handleHideDrawer={this.handleHideDrawer} />
         <div className={css(styles.app)}>
           <Header />
           <div className={css(styles.body)}>
