@@ -81,7 +81,7 @@ class App extends React.Component {
       { id: 3, name: 'React', credit: 40 },
     ];
 
-     render() (
+    return (
       <>
         <Notifications listNotifications={listNotifications} displayDrawer={this.state.displayDrawer} handleDisplayDrawer={this.handleDisplayDrawer} handleHideDrawer={this.handleHideDrawer} />
         <div className={css(styles.app)}>
