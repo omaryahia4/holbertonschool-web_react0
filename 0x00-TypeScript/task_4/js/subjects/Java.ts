@@ -1,3 +1,5 @@
+/// <reference path="Subject.ts" />
+
 namespace Subjects {
   export interface Teacher {
     experienceTeachingJava?: number;

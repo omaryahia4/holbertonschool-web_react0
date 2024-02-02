@@ -4,6 +4,11 @@
     padding-left: 1rem;
     margin-bottom: 1rem;
 }
-#default {
+
+[data-priority="default"] {
     color: blue;
+}
+  
+[data-priority="urgent"] {
+color: red;
 }

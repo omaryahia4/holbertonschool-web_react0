@@ -19,6 +19,7 @@ module.exports = {
     new HTMLWebpackPlugin({
       filename: 'index.html',
       template: './dist/index.html',
+      inject: false
     }),
   ],
   module: {

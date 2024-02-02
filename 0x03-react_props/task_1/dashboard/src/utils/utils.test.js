@@ -1,7 +1,7 @@
 import { getFullYear, getFooterCopy, getLatestNotification } from './utils.js';
 
 it('should equal 2022', () => {
-  expect(getFullYear()).toBe(2022);
+  expect(getFullYear()).toBe(2023);
 });
 
 it('should equal Holberton School if true', () => {

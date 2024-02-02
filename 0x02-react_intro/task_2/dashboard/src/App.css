@@ -14,7 +14,7 @@
   border-top: solid;
   border-bottom: solid;
   border-color: #e0454b;
-  min-height: 50vmax;
+  height: 50vh;
   padding: 30px;
 }
 .App-footer {

@@ -1,0 +1,20 @@
+#CourseList {
+    margin-left: auto;
+    margin-right: auto;
+    border: ridge;
+    width: 100%;
+}
+
+.table-title {
+    text-align: center;
+    border-bottom: groove;
+}
+
+thead th {
+    text-align: left;
+    border-bottom: groove;
+}
+tbody th {
+    text-align: left;
+    font-weight: 100;
+}

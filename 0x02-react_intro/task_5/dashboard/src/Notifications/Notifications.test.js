@@ -1,5 +1,7 @@
 import { shallow } from 'enzyme';
 import Notifications from './Notifications';
+import React from 'react';
+import '../../config/setupTests'
 
 it('renders without crashing', () => {
   shallow(<Notifications />);
